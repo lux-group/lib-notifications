@@ -2,10 +2,10 @@ import { Block, KnownBlock, MessageAttachment } from '@slack/webhook'
 
 export namespace Notification {
   interface AlertsProps {
-    name: string; 
-    title: string; 
-    message: string; 
-    footer: string;
+    name?: string; 
+    title?: string; 
+    message?: string; 
+    footer?: string;
     color: string;
   }
   
