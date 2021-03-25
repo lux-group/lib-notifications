@@ -10,10 +10,10 @@ export namespace Notification {
   }
   
   interface Alerts {
-    info: (args: Omit<Notification, 'color'>) => Promise<void>;
-    error: (args: Omit<Notification, 'color'>) => Promise<void>;
-    success: (args: Omit<Notification, 'color'>) => Promise<void>;
-    warning: (args: Omit<Notification, 'color'>) => Promise<void>;
+    info: (args: Omit<AlertsProps, 'color'>, appName?: string) => Promise<void>;
+    error: (args: Omit<AlertsProps, 'color'>, appName?: string) => Promise<void>;
+    success: (args: Omit<AlertsProps, 'color'>, appName?: string) => Promise<void>;
+    warning: (args: Omit<AlertsProps, 'color'>, appName?: string) => Promise<void>;
   }
 
   interface Send {
