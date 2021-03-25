@@ -1,0 +1,61 @@
+{
+  "name": "@luxuryescapes/lib-notifications",
+  "version": "1.0.0",
+  "description": "Lib for notifications",
+  "main": "index.js",
+  "types": "typings/index.d.ts",
+  "files": [
+    "index.js",
+    "typings/notifications.d.ts",
+    "typings/index.d.ts",
+    "lib/*.js",
+    "lib/*.d.ts",
+    "lib/notifications/*.js",
+    "lib/notifications/*.d.ts",
+    "lib/notifications/alerts/*.js",
+    "lib/notifications/alerts/*.d.ts"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --fix --ext .ts src",
+    "test": "mocha test",
+    "build": "tsc",
+    "prepare": "yarn lint && yarn clean && yarn build && yarn test"
+  },
+  "author": "reb2020",
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lux-group/lib-notifications.git"
+  },
+  "dependencies": {
+    "@slack/webhook": "6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.35",
+    "@typescript-eslint/eslint-plugin": "4.19.0",
+    "@typescript-eslint/parser": "4.19.0",
+    "chai": "4.3.4",
+    "chai-shallow-deep-equal": "1.4.6",
+    "eslint": "7.22.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.3.1",
+    "eslint-plugin-standard": "5.0.0",
+    "mocha": "8.3.2",
+    "mockdate": "3.0.4",
+    "sinon": "10.0.0",
+    "typescript": "4.2.3"
+  },
+  "bugs": {
+    "url": "https://github.com/lux-group/lib-notifications/issues"
+  },
+  "homepage": "https://github.com/lux-group/lib-notifications#readme"
+}
