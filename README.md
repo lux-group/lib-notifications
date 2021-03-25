@@ -7,15 +7,15 @@ npm install --save @luxuryescapes/lib-notifications
 Use
 
 ```js
-import { initHook, notify } from '@luxuryescapes/lib-notifications'
+import notifications from '@luxuryescapes/lib-notifications'
 
-initHook('hook', 'appName')
+notifications.initHook('hook', 'appName')
 
-initHook('hook2', 'appName2')
+notifications.initHook('hook2', 'appName2')
 
-await notify.send.plain('text', 'appName2')
+await notifications.notify.send.plain('text', 'appName2')
 
-await notify.send.blocks(
+await notifications.notify.send.blocks(
   [
         {
           type: "section",
@@ -40,7 +40,7 @@ await notify.send.blocks(
       ]
 )
 
-await notify.send.attachments([
+await notifications.notify.send.attachments([
   {
     mrkdwn_in: ['text'],
     color: '#004085',

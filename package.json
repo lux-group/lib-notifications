@@ -1,13 +1,12 @@
 {
   "name": "@luxuryescapes/lib-notifications",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lib for notifications",
   "main": "index.js",
   "types": "typings/index.d.ts",
   "files": [
     "index.js",
-    "typings/notifications.d.ts",
-    "typings/index.d.ts",
+    "typings/*.d.ts",
     "lib/*.js",
     "lib/*.d.ts",
     "lib/notifications/*.js",
