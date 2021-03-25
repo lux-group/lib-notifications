@@ -1,3 +1,6 @@
 const notifications = require('./lib')
 
-module.exports = notifications
+module.exports = {
+  initHook: notifications.initHook,
+  notify: notifications.notify
+}
