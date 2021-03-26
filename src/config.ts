@@ -1,5 +1,10 @@
 import { IncomingWebhook } from '@slack/webhook'
 
-const config = new Map<string, IncomingWebhook>()
+interface Props {
+  webhook: IncomingWebhook;
+  enable: boolean;
+}
+
+const config = new Map<string, Props>()
 
 export default config

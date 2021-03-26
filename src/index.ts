@@ -16,12 +16,12 @@ import attachments from './notifications/attachments'
 
 const url = 'https://hooks.slack.com/services/'
 
-const initHook = (hook: string, appName: string): void => {
+const initHook = (hook: string, appName: string, enable: boolean = true): void => {
   if (config.has(appName)) {
     throw new Error(`Hook '${appName}' was already initialized`)
   }
   const webhook = new IncomingWebhook(`${url}${hook}`)
-  config.set(appName, webhook)
+  config.set(appName, { webhook, enable })
 }
 
 const notify: Notification.Notify = {

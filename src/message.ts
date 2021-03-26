@@ -23,7 +23,9 @@ async function send(message: SendProps, appName?: string): Promise<void> {
   }
 
   try {
-    await config.get(confName)!.send(message)
+    if (config.get(confName)!.enable) {
+      await config.get(confName)!.webhook.send(message)
+    }
   } catch (e) {
     console.error(JSON.stringify(e, null, 2))
   }
